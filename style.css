@@ -1,0 +1,359 @@
+/* Estilos Gerais e Tipografia Moderna */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #93c5fd;
+    color: #0f172a;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Efeito de Neve com Flocos Brancos */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    background: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fall linear infinite;
+    z-index: 1;
+    opacity: 0.85;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px) translateX(0);
+    }
+    100% {
+        transform: translateY(105vh) translateX(25px);
+    }
+}
+
+/* Header / Menu Superior Tecnológico */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 50px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1d4ed8;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+/* Botão do WhatsApp Moderno com Brilho */
+.btn-whatsapp {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+}
+
+/* Seções e Páginas */
+.page-section {
+    display: flex;
+    min-height: 100vh;
+    padding: 160px 20px 60px 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+/* Blocos Estilo Glassmorphism Avançado */
+.hero-container, 
+.page-section .grid-container, 
+.detail-view, 
+.about-content, 
+.budget-form {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+    border-radius: 28px;
+    padding: 50px;
+}
+
+.hero-container {
+    text-align: center;
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero-container h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+.hero-container p {
+    font-size: 1.15rem;
+    color: #475569;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Botões Principais Tecnológicos */
+.btn-primary {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    color: white;
+    border: none;
+    padding: 16px 38px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.35);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(14, 165, 233, 0.5);
+}
+
+/* Títulos das Seções */
+.page-section h2 {
+    font-size: 2.6rem;
+    color: #0f172a;
+    margin-bottom: 35px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Grade de Serviços / Cards com Ícones */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1300px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(14, 165, 233, 0.12);
+    border-color: #bae6fd;
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    margin-bottom: 14px;
+    color: #0f172a;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card p {
+    color: #64748b;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.card-btn {
+    background: transparent;
+    color: #0ea5e9;
+    border: 2px solid #0ea5e9;
+    padding: 10px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.card-btn:hover {
+    background: #0ea5e9;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+/* Quem Somos e Carrossel */
+.about-content {
+    max-width: 1050px;
+    width: 100%;
+    text-align: center;
+}
+
+.about-content h2 {
+    color: #0f172a;
+    font-size: 2.4rem;
+}
+
+.about-content p {
+    color: #475569;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    background-color: #f8fafc;
+    flex-shrink: 0;
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-dot.active {
+    background: #0ea5e9;
+}
+
+/* Formulário de Orçamento */
+.budget-form {
+    max-width: 850px;
+    width: 100%;
+    text-align: left;
+}
+
+.budget-form h2 {
+    color: #0f172a;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.error-msg {
+    color: #ef4444;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 6px;
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 25px 20px;
+    color: #1e293b;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin-top: 40px;
+}

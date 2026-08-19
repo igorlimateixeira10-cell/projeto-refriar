@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrigeração Refriar Eletromecânicas</title>
+    <!-- Favicon com Floco de Neve -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❄️</text></svg>">
+    <!-- Importando a fonte moderna Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Menu Superior (Apenas o WhatsApp) -->
+    <header>
+        <div class="logo">❄ REFRIGERAÇÃO REFRIAR</div>
+        <nav>
+            <ul>
+                <li><a href="https://wa.me/5527997245862" target="_blank" class="btn-whatsapp">WhatsApp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Início -->
+    <section id="inicio" class="page-section">
+        <div class="hero-container">
+            <h1>Climatização e Assistência Técnica Profissional</h1>
+            <p>Reunindo com excelência desde 2014. Venda, instalação e manutenção de ar-condicionado e eletrodomésticos residenciais e comerciais.</p>
+            <a href="#servicos" class="btn-primary" style="text-decoration: none; display: inline-block;">Explorar Serviços</a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="page-section">
+        <div class="about-content">
+            <h2>Quem Somos</h2>
+            <p>A Refriar é uma equipe com excelência desde 2014, oferecendo soluções completas em climatização e assistência técnica residencial e comercial. O compromisso, preço justo e garantia de serviços realizados são nossos pilares.</p>
+            
+            <div class="carousel">
+                <div class="carousel-images" id="carouselImages">
+                    <img src="img/foto-profissional.jpeg" alt="Profissional da Refriar">
+                    <img src="img/refriar.jpeg" alt="Fachada Refriar Climatização">
+                </div>
+                <div class="carousel-nav">
+                    <button class="carousel-dot active" onclick="currentSlide(0)"></button>
+                    <button class="carousel-dot" onclick="currentSlide(1)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="page-section">
+        <h2>Nossos Serviços</h2>
+        <div class="grid-container">
+            <div class="card">
+                <div class="card-icon">❄️</div>
+                <h3>Ar-Condicionado</h3>
+                <p>Venda e instalação, locação e manutenção preventiva, reparo e carga de gás.</p>
+                <a href="#orcamento" class="card-btn">Solicitar Orçamento</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Eletrodomésticos</h3>
+                <p>Consertos e reparos, máquinas de lavar, geladeira, micro-ondas e fogão.</p>
+                <a href="#orcamento" class="card-btn">Solicitar Orçamento</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3>Consultoria Técnica</h3>
+                <p>Avaliação técnica no local e orçamento com opções e planejamento.</p>
+                <a href="#orcamento" class="card-btn">Solicitar Orçamento</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">📋</div>
+                <h3>Planos de Manutenção</h3>
+                <p>Planos recorrentes para empresas e descontos em contratos anuais.</p>
+                <a href="#orcamento" class="card-btn">Solicitar Orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Orçamento -->
+    <section id="orcamento" class="page-section">
+        <div class="budget-form">
+            <h2>Solicite seu Orçamento</h2>
+            <form onsubmit="enviarWhatsApp(event)">
+                <div class="form-group">
+                    <label for="nome">Seu Nome</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone / WhatsApp</label>
+                    <input type="text" id="telefone" placeholder="(00) 00000-0000" oninput="validarTelefone(this)" required>
+                    <span id="erro-telefone" class="error-msg">Apenas números</span>
+                </div>
+                <div class="form-group">
+                    <label for="servico-select">Selecione o serviço</label>
+                    <select id="servico-select">
+                        <option value="Ar-Condicionado">Ar-Condicionado</option>
+                        <option value="Eletrodomésticos">Eletrodomésticos</option>
+                        <option value="Consultoria Técnica">Consultoria Técnica</option>
+                        <option value="Planos de Manutenção">Planos de Manutenção</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Descreva o problema ou modelo do equipamento</label>
+                    <textarea id="mensagem" placeholder="Detalhes do seu pedido..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" id="btn-enviar">Enviar via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Refriar Eletromáquinas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
