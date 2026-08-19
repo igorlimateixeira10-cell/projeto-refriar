@@ -44,7 +44,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 50px;
+    padding: 18px 25px;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -54,10 +54,10 @@ header {
 }
 
 .logo {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 800;
     color: #1d4ed8;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
 }
 
@@ -65,13 +65,14 @@ header {
 .btn-whatsapp {
     background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white !important;
-    padding: 12px 28px;
+    padding: 10px 20px;
     border-radius: 30px;
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     text-decoration: none;
     box-shadow: 0 6px 20px rgba(34, 197, 94, 0.35);
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .btn-whatsapp:hover {
@@ -83,7 +84,7 @@ header {
 .page-section {
     display: flex;
     min-height: 100vh;
-    padding: 160px 20px 60px 20px;
+    padding: 130px 15px 50px 15px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -103,18 +104,18 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.9);
     box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
     border-radius: 28px;
-    padding: 50px;
+    padding: 35px 25px;
+    width: 100%;
+    max-width: 1050px;
 }
 
 .hero-container {
     text-align: center;
-    max-width: 1050px;
-    width: 100%;
     margin: 0 auto;
 }
 
 .hero-container h1 {
-    font-size: 3.2rem;
+    font-size: 2.3rem;
     font-weight: 800;
     margin-bottom: 20px;
     color: #0f172a;
@@ -122,9 +123,9 @@ header {
 }
 
 .hero-container p {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: #475569;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     line-height: 1.6;
 }
 
@@ -133,13 +134,15 @@ header {
     background: linear-gradient(135deg, #0ea5e9, #0284c7);
     color: white;
     border: none;
-    padding: 16px 38px;
-    font-size: 1.1rem;
+    padding: 14px 30px;
+    font-size: 1rem;
     font-weight: 600;
     border-radius: 35px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 8px 20px rgba(14, 165, 233, 0.35);
+    width: 100%;
+    max-width: 300px;
 }
 
 .btn-primary:hover {
@@ -149,9 +152,9 @@ header {
 
 /* Títulos das Seções */
 .page-section h2 {
-    font-size: 2.6rem;
+    font-size: 2rem;
     color: #0f172a;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     text-align: center;
     font-weight: 700;
 }
@@ -159,94 +162,91 @@ header {
 /* Grade de Serviços / Cards com Ícones */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 20px;
     width: 100%;
     max-width: 1300px;
     margin-top: 10px;
     background: rgba(255, 255, 255, 0.4);
+    padding: 20px !important;
 }
 
 .card {
     background: #ffffff;
     border: 1px solid rgba(226, 232, 240, 0.8);
     border-radius: 20px;
-    padding: 40px 30px;
+    padding: 25px 20px;
     text-align: left;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
     transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: 0 20px 35px rgba(14, 165, 233, 0.12);
     border-color: #bae6fd;
 }
 
 .card-icon {
-    font-size: 2.2rem;
-    margin-bottom: 18px;
+    font-size: 2rem;
+    margin-bottom: 12px;
 }
 
 .card h3 {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
     color: #0f172a;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
 }
 
 .card p {
     color: #64748b;
-    font-size: 1.05rem;
-    margin-bottom: 25px;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 .card-btn {
     background: transparent;
     color: #0ea5e9;
     border: 2px solid #0ea5e9;
-    padding: 10px 22px;
+    padding: 10px 20px;
     border-radius: 12px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     text-align: center;
 }
 
 .card-btn:hover {
     background: #0ea5e9;
     color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
 }
 
 /* Quem Somos e Carrossel */
 .about-content {
-    max-width: 1050px;
-    width: 100%;
     text-align: center;
 }
 
 .about-content h2 {
     color: #0f172a;
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
 .about-content p {
     color: #475569;
-    font-size: 1.15rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 750px;
-    margin: 30px auto;
+    max-width: 100%;
+    margin: 25px auto 0 auto;
     overflow: hidden;
     border-radius: 18px;
     border: 1px solid rgba(226, 232, 240, 0.8);
@@ -260,7 +260,7 @@ header {
 
 .carousel-images img {
     width: 100%;
-    height: 420px;
+    height: 280px;
     object-fit: contain;
     background-color: #f8fafc;
     flex-shrink: 0;
@@ -280,7 +280,6 @@ header {
     background: #cbd5e1;
     border: none;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 .carousel-dot.active {
@@ -289,39 +288,36 @@ header {
 
 /* Formulário de Orçamento */
 .budget-form {
-    max-width: 850px;
-    width: 100%;
     text-align: left;
 }
 
 .budget-form h2 {
     color: #0f172a;
-    font-size: 2.2rem;
-    margin-bottom: 25px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     text-align: left;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: #334155;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .form-group input, .form-group select, .form-group textarea {
     width: 100%;
-    padding: 14px 16px;
+    padding: 12px 14px;
     border-radius: 12px;
     border: 1px solid #cbd5e1;
     background: #ffffff;
     color: #0f172a;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    font-size: 0.95rem;
 }
 
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
@@ -332,14 +328,14 @@ header {
 
 .form-group textarea {
     resize: vertical;
-    height: 120px;
+    height: 100px;
 }
 
 .error-msg {
     color: #ef4444;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    margin-top: 6px;
+    margin-top: 4px;
     display: none;
 }
 
@@ -348,12 +344,47 @@ footer {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 25px 20px;
+    padding: 20px 15px;
     color: #1e293b;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 500;
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(8px);
     border-top: 1px solid rgba(255, 255, 255, 0.4);
-    margin-top: 40px;
+    margin-top: 30px;
+}
+
+/* Ajustes para Computadores (Telas Maiores) */
+@media (min-width: 768px) {
+    header {
+        padding: 22px 50px;
+    }
+    .logo {
+        font-size: 1.4rem;
+    }
+    .hero-container h1 {
+        font-size: 3.2rem;
+    }
+    .hero-container p {
+        font-size: 1.15rem;
+    }
+    .page-section h2 {
+        font-size: 2.6rem;
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px !important;
+    }
+    .carousel-images img {
+        height: 420px;
+    }
+    .budget-form h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
