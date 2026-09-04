@@ -1,48 +1,67 @@
-# refriar — site
+# Refriar — Refrigeração & Assistência Técnica
 
-Projeto estático simples para apresentação da `refriar` (Refrigeração & Assistência Técnica).
+Site institucional profissional desenvolvido para a Refrigeração Refriar Eletromecânicas, empresa de assistência técnica em refrigeração.
 
-Como rodar localmente:
+## Sobre o projeto
 
-```bash
-cd /Users/igorlima/Desktop/projeto-refriar
-python3 -m http.server 8000
-# abrir http://localhost:8000
-```
+O objetivo do site é apresentar a empresa e seus serviços, e converter visitantes em pedidos de orçamento através de um formulário que gera automaticamente uma mensagem para envio via WhatsApp — sem depender de redes sociais para o primeiro contato.
 
-O que falta ajustar/entregar:
-- Fornecer imagens finais para o `hero` e galeria (preferivelmente WebP/AVIF).
-- Substituir `logo.svg` pelo logo final (SVG/PNG). O `manifest.json` e `favicon` usam `logo.svg` atualmente.
-- Preencher o `GA_ID` no `<script>` se desejar Google Analytics; o banner de consentimento controla o carregamento.
-- Gerar favicons PNG em múltiplos tamanhos para Apple/Windows se precisar.
+## Principais funcionalidades
 
-Gerar favicons a partir de `img/refriar.jpeg` (macOS / ImageMagick)
+- Página única com seções de início, sobre a empresa e serviços oferecidos.
+- Carrossel de imagens na página inicial.
+- Formulário de orçamento: o visitante preenche nome, telefone, serviço de interesse e detalhes, e o site monta automaticamente uma mensagem formatada e abre o WhatsApp da empresa com o texto pronto para envio.
+- Botão de contato direto via WhatsApp no menu superior.
+- Web manifest configurado (nome, ícone e cor do app).
 
-macOS (sips):
-```bash
-# 512x512
-sips -Z 512 img/refriar.jpeg --out icon-512.png
-# 180x180 (apple)
-sips -Z 180 img/refriar.jpeg --out apple-touch-icon-180.png
-# 32x32 e 16x16
-sips -Z 32 img/refriar.jpeg --out favicon-32.png
-sips -Z 16 img/refriar.jpeg --out favicon-16.png
-```
+## Tecnologias
 
-ImageMagick (cross-platform):
-```bash
-magick img/refriar.jpeg -resize 512x512 icon-512.png
-magick img/refriar.jpeg -resize 180x180 apple-touch-icon-180.png
-magick img/refriar.jpeg -resize 32x32 favicon-32.png
-magick img/refriar.jpeg -resize 16x16 favicon-16.png
-```
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
 
-Depois de gerar os PNGs, coloque-os na raiz do projeto (ao lado de `index.html`) — os links no `index.html` e `manifest.json` já apontam para esses nomes.
+## Design e responsividade
 
-Deploy recomendado:
-- GitHub Pages (simples) ou Netlify/Vercel para deploy contínuo com HTTPS.
+O CSS define breakpoints em `768px` e `1024px` (abordagem mobile-first), ajustando o layout entre celular, tablet e desktop. Não foi feito teste em dispositivos físicos como parte deste projeto.
 
-O que posso fazer em seguida:
-- Gerar placeholders WebP/AVIF e atualizar `srcset`.
-- Integrar imagens que você enviar e otimizar tamanho/resolução.
-- Conectar Analytics (com consentimento) e adicionar Tag Manager.
+## Deploy
+
+Site publicado em: https://projeto-refriar.vercel.app
+
+## Desenvolvimento
+
+Projeto estático, sem framework ou build step: HTML, CSS e JavaScript servidos diretamente. O envio do formulário de orçamento é feito em JavaScript puro, montando a URL do WhatsApp (`wa.me`) com a mensagem do cliente já preenchida.
+
+---
+
+## English
+
+# Refriar — Refrigeration & Technical Support
+
+A professional institutional website built for Refrigeração Refriar Eletromecânicas, a refrigeration technical support company.
+
+### About the project
+
+The goal of the site is to present the company and its services, and convert visitors into quote requests through a form that automatically generates a message to be sent via WhatsApp — without depending on social media for the first contact.
+
+### Key features
+
+- Single-page site with home, about and services sections.
+- Image carousel on the homepage.
+- Quote request form: the visitor fills in name, phone, service of interest and details, and the site automatically builds a formatted message and opens the company's WhatsApp with the text ready to send.
+- Direct WhatsApp contact button in the top menu.
+- Web manifest configured (app name, icon and theme color).
+
+### Technologies
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+### Design and responsiveness
+
+The CSS defines breakpoints at `768px` and `1024px` (mobile-first approach), adapting the layout across phone, tablet and desktop. No testing was performed on physical devices as part of this project.
+
+### Live site
+
+https://projeto-refriar.vercel.app
